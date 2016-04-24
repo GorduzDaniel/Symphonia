@@ -6,17 +6,17 @@ import javafx.scene.Scene;
 import javafx.application.Application;
 
 public class App extends Application {
-	public static String MAIN_MENU_SCENE_ID = "mainMenu";
-	public static String PLAY_MENU_SCENE_ID = "playMenu";
-	public static String PIANO_SHEET_SCENE_ID = "pianoSheet";
+	public static String INITIAL_SCENE_ID = "initialScene";
+	public static String AUTHORS_SCENE_ID = "authorsScene";
+	public static String PIANO_PLAY_SCENE_ID = "pianoPlayScene";
 	
 	@Override
 	public void start(Stage primaryStage) {
 		ScenesController container = new ScenesController();
-		container.loadScene(App.MAIN_MENU_SCENE_ID, "/scenes/MainMenu.fxml");
-		container.loadScene(App.PLAY_MENU_SCENE_ID, "/scenes/PlayMenu.fxml");
-		container.loadScene(App.PIANO_SHEET_SCENE_ID, "/scenes/PianoSheet.fxml");
-		container.setScene(App.MAIN_MENU_SCENE_ID);
+		container.loadScene(App.INITIAL_SCENE_ID, "/scenes/InitialScene.fxml");
+		container.loadScene(App.AUTHORS_SCENE_ID, "/scenes/AuthorsScene.fxml");
+		container.loadScene(App.PIANO_PLAY_SCENE_ID, "/scenes/PianoPlay.fxml");
+		container.setScene(App.INITIAL_SCENE_ID);
 		
 		Group root = new Group();
 		root.getChildren().addAll(container);
