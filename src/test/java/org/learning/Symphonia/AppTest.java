@@ -5,9 +5,10 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 import org.learning.Symphonia.MusicTest.SheetMusicControllerTest;
+import org.learning.Symphonia.MusicTest.SongsControllerTest;
 
 @RunWith(Suite.class)
-@SuiteClasses({ SheetMusicControllerTest.class })
+@SuiteClasses({ SheetMusicControllerTest.class, SongsControllerTest.class })
 
 public class AppTest {
 }

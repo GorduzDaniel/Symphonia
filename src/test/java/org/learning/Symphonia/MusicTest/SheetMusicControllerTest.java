@@ -13,6 +13,6 @@ public class SheetMusicControllerTest {
 	}
 	@Test
 	public void musicLoaderTest() throws Exception {
-		assertNotEquals(null, smc.loadPiece("src/test/resources/pieces/test.xml"));
+		assertNotEquals(null, smc.loadPiece("src/test/resources/pieces/test/test.xml"));
 	}
 }
