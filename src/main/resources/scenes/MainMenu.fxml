@@ -8,32 +8,25 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<Pane maxHeight="450.0" maxWidth="800.0" minHeight="450.0" minWidth="800.0" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.learning.Symphonia.Scene.MainMenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.learning.Symphonia.Scene.MainMenuController">
    <children>
-      <ImageView fitHeight="450.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="447.0" fitWidth="800.0" layoutX="8.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/background.png" />
          </image>
       </ImageView>
-      <Label layoutX="352.0" layoutY="292.0" onMouseClicked="#onMouseExitClicked" text="Exit">
+      <Label layoutX="84.0" layoutY="-75.0" text="Symphonia" textFill="#282827cc">
          <font>
-            <Font name="ChopinScript" size="50.0" />
+            <Font name="ChopinScript" size="160.0" />
          </font>
       </Label>
-      <Label layoutX="325.0" layoutY="198.0" onMouseClicked="#onMouseOptionsClicked" text="Options">
-         <font>
-            <Font name="ChopinScript" size="60.0" />
-         </font>
-      </Label>
-      <Label layoutX="335.0" layoutY="118.0" text="Play" onMouseClicked="#onMousePlayClicked">
-         <font>
-            <Font name="ChopinScript" size="60.0" />
-         </font>
-      </Label>
-      <Label layoutX="278.0" layoutY="8.0" text="Symphonia">
-         <font>
-            <Font name="ChopinScript" size="65.0" />
-         </font>
-      </Label>
+      <ImageView fx:id="playButton" fitHeight="133.0" fitWidth="130.0" layoutX="340.0" layoutY="208.0" onMouseClicked="#onMouseClickedPlayButton" onMouseEntered="#onMouseEnteredPlayButton" onMouseExited="#onMouseExitedPlayButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/playbutton.png" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="-1.0" />
+         </effect>
+      </ImageView>
    </children>
-</Pane>
+</AnchorPane>

@@ -9,29 +9,42 @@ import org.learning.Symphonia.ScenesController;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.effect.ColorAdjust;
+import javafx.scene.image.ImageView;
 
 public class MainMenuController implements Initializable, ControllerTemplate {
+	@FXML
+	private ImageView playButton;
+	
 	private ScenesController controller;
 	
-	@Override
-	public void setSceneParent(ScenesController scenePage) {
-		controller = scenePage;
-		
-	}
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
-	}
 	@FXML
-	private void onMousePlayClicked() {
+	private void onMouseClickedPlayButton() {
 		controller.setScene(App.PLAY_MENU_SCENE_ID);
 	}
 	@FXML
-	private void onMouseOptionsClicked() {
-		controller.setScene(App.OPTIONS_MENU_SCENE_ID);
+	private void onMouseExitedPlayButton() {
+		ColorAdjust colorAdjust = new ColorAdjust();
+		colorAdjust.setContrast(0.0);
+		colorAdjust.setHue(0.0);
+	    colorAdjust.setBrightness(-1.0);
+	    colorAdjust.setSaturation(0.0);
+	    playButton.setEffect(colorAdjust);
 	}
 	@FXML
-	private void onMouseExitClicked() {
-		System.exit(0);
+	private void onMouseEnteredPlayButton() {
+		ColorAdjust colorAdjust = new ColorAdjust();
+		colorAdjust.setContrast(0.0);
+		colorAdjust.setHue(0.0);
+	    colorAdjust.setBrightness(0.0);
+	    colorAdjust.setSaturation(1.0);
+	    playButton.setEffect(colorAdjust);
+	}
+	@Override
+	public void setSceneParent(ScenesController scene) {
+		controller = scene;
+	}
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
 	}
 }
