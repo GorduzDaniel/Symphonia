@@ -10,7 +10,7 @@ import org.learning.Symphonia.ScenesController;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
-public class PlayMenuController implements Initializable, ControllerTemplate {
+public class AuthorsSceneController implements Initializable, ControllerTemplate {
 	private ScenesController controller;
 
 	@Override
@@ -23,6 +23,6 @@ public class PlayMenuController implements Initializable, ControllerTemplate {
 	}
 	@FXML
 	private void onMouseClickedBeethoven() {
-		controller.setScene(App.PIANO_SHEET_SCENE_ID);
+		;
 	}
 }

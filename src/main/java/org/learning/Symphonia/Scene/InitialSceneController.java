@@ -16,7 +16,7 @@ import javafx.util.Duration;
 import javafx.animation.ScaleTransition;
 import javafx.animation.Timeline;
 
-public class MainMenuController implements Initializable, ControllerTemplate {
+public class InitialSceneController implements Initializable, ControllerTemplate {
 	@FXML
 	private ImageView playButton;
 	
@@ -27,7 +27,7 @@ public class MainMenuController implements Initializable, ControllerTemplate {
 	@FXML
 	private void onMouseClickedPlayButton() {
 		playButtonScaleTransition.stop();
-		controller.setScene(App.PLAY_MENU_SCENE_ID);
+		controller.setScene(App.AUTHORS_SCENE_ID);
 	}
 	@FXML
 	private void onMouseExitedPlayButton() {
