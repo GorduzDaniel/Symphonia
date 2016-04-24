@@ -20,10 +20,9 @@ public class PlayMenuController implements Initializable, ControllerTemplate {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-		
 	}
 	@FXML
-	private void onMouseBackClicked() {
-		controller.setScene(App.MAIN_MENU_SCENE_ID);
+	private void onMouseClickedBeethoven() {
+		controller.setScene(App.PIANO_SHEET_SCENE_ID);
 	}
 }
