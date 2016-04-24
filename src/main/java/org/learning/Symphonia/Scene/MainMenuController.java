@@ -12,14 +12,21 @@ import javafx.fxml.Initializable;
 import javafx.scene.effect.ColorAdjust;
 import javafx.scene.image.ImageView;
 
+import javafx.util.Duration;
+import javafx.animation.ScaleTransition;
+import javafx.animation.Timeline;
+
 public class MainMenuController implements Initializable, ControllerTemplate {
 	@FXML
 	private ImageView playButton;
 	
 	private ScenesController controller;
 	
+	private ScaleTransition playButtonScaleTransition;
+	
 	@FXML
 	private void onMouseClickedPlayButton() {
+		playButtonScaleTransition.stop();
 		controller.setScene(App.PLAY_MENU_SCENE_ID);
 	}
 	@FXML
@@ -46,5 +53,12 @@ public class MainMenuController implements Initializable, ControllerTemplate {
 	}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		playButtonScaleTransition = new ScaleTransition(Duration.millis(1000), playButton);
+		playButtonScaleTransition.setByX(0.2f);
+		playButtonScaleTransition.setByY(0.2f);
+		playButtonScaleTransition.setCycleCount(Timeline.INDEFINITE);
+		playButtonScaleTransition.setAutoReverse(true);
+	 
+		playButtonScaleTransition.play();
 	}
 }
