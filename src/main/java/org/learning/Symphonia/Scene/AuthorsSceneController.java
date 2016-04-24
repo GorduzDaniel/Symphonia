@@ -23,6 +23,6 @@ public class AuthorsSceneController implements Initializable, ControllerTemplate
 	}
 	@FXML
 	private void onMouseClickedBeethoven() {
-		;
+		controller.setScene(App.AUTHORS_PIECES_LIST);
 	}
 }
