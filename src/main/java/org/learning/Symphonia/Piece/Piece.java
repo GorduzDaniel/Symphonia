@@ -9,9 +9,18 @@ public class Piece {
 	@Element
 	private String resource;
 	
+   /**
+	*
+	* @return name
+	*/
 	public String getName() {
 		return name;
 	}
+	
+   /**
+	*
+	* @return resource
+	*/
 	public String getResource() {
 		return resource;
 	}

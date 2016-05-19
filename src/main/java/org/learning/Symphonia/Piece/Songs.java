@@ -10,6 +10,10 @@ public class Songs {
 	@ElementList
 	private List<Piece> pieces;
 	
+   /**
+	*
+	* @return pieces
+	*/
 	public List<Piece> getPieces() {
 		return pieces;
 	}
